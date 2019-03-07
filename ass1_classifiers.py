@@ -120,8 +120,8 @@ def sgd_clf_fun_five_stars(X_train, X_test, y_train, y_test, five_star_indices, 
     negative_predictions = []
     neutral_predictions = []
 
-    if len(five_star_indices) > 200:
-        sample_size = 200
+    if len(five_star_indices) > 400:
+        sample_size = 400
     else:
         sample_size = len(five_star_indices)
 
@@ -183,7 +183,7 @@ if __name__ == "__main__":
 
     # modify the following paths appropriately
     labeled_words_file_path = "data/labeled_words.txt"
-    yelp_review_data_path = "data/review_1000.json"
+    yelp_review_data_path = "data/review_20000.json"
 
     # read start labeling the data by using labeled_words_file
     labeled_data = load_labeled_words(labeled_words_file_path)
